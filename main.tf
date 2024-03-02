@@ -1,6 +1,6 @@
 module "gkevpc" {
   source  = "app.terraform.io/cimb-tf-cloud/gkevpc/google"
-  version = "1.0.1"
+  version = "1.0.2"
   
   # VPC
   vpc_name                          = "shared-host-nonprod"
