@@ -1,3 +1,13 @@
+import {
+  id = "projects/gcp-shared-host-nonprod/global/networks/shared-host-nonprod"
+  to = google_compute_network.vpc
+}
+
+import {
+  id = "projects/gcp-shared-host-nonprod/regions/asia-southeast2/subnetworks/gcp-rnd-gke-node-devops"
+  to = google_compute_subnetwork.subnet
+}
+
 module "gkevpc" {
   source  = "app.terraform.io/cimb-tf-cloud/gkevpc/google"
   version = "1.0.1"
