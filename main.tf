@@ -1,3 +1,13 @@
+terraform {
+  cloud {
+    organization = "cimb-tf-cloud"
+
+    workspaces {
+      name = "gke-terraform-v3"
+    }
+  }
+}
+
 import {
   id = "projects/gcp-shared-host-nonprod/global/networks/shared-host-nonprod"
   to = google_compute_network.vpc
