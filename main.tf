@@ -10,7 +10,7 @@ import {
 
 module "gkevpc" {
   source  = "app.terraform.io/cimb-tf-cloud/gkevpc/google"
-  version = "1.0.3"
+  version = "1.0.4"
   
   # GKE
   google_container_cluster = {
