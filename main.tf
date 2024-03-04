@@ -1,11 +1,11 @@
 import {
   id = "projects/gcp-shared-host-nonprod/global/networks/shared-host-nonprod"
-  to = module.gkevpc.google_compute_network.vpc["shared-host-nonprod"]
+  to = module.gkevpc.google_compute_network.vpc
 }
 
 import {
   id = "projects/gcp-shared-host-nonprod/regions/asia-southeast2/subnetworks/gcp-rnd-gke-node-devops"
-  to = module.gkevpc.google_compute_subnetwork.subnet["gcp-rnd-gke-node-devops"]
+  to = module.gkevpc.google_compute_subnetwork.subnet
 }
 
 module "gkevpc" {
@@ -26,7 +26,7 @@ module "gkevpc" {
     second_range_name               = "gcp-rnd-gke-service-devops"
     second_ip_cidr_range            = "10.121.115.128/26"
   }
-  
+
   # GKE
   google_container_cluster = {
     name                            = "terraform-cloud-gke"
