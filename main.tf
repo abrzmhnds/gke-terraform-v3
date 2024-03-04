@@ -5,7 +5,7 @@ import {
 
 import {
   id = "projects/gcp-shared-host-nonprod/regions/asia-southeast2/subnetworks/gcp-rnd-gke-node-devops"
-  to = module.gkevpc.google_compute_subnetwork.subnet["gcp-rnd-gke-node-devops']
+  to = module.gkevpc.google_compute_subnetwork.subnet["gcp-rnd-gke-node-devops"]
 }
 
 module "gkevpc" {
