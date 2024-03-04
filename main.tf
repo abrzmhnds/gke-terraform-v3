@@ -14,7 +14,7 @@ module "gkevpc" {
   
   # VPC
   vpc_name                          = "shared-host-nonprod"
-  project_network                   = "gcp_shared_host_nonprod"
+  project_network                   = "gcp-shared-host-nonprod"
   subnetwork_name                   = "gcp-rnd-gke-node-devops"
   region_network                    = "asia-southeast2"
   google_compute_subnetwork = {
