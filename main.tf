@@ -1,16 +1,16 @@
 import {
   id = "projects/gcp-shared-host-nonprod/global/networks/shared-host-nonprod"
-  to = google_compute_network.vpc
+  to = module.gkevpc.google_compute_network.vpc shared-host-nonprod
 }
 
 import {
   id = "projects/gcp-shared-host-nonprod/regions/asia-southeast2/subnetworks/gcp-rnd-gke-node-devops"
-  to = google_compute_subnetwork.subnet
+  to = module.gkevpc.google_compute_subnetwork.subnet gcp-rnd-gke-node-devops
 }
 
 module "gkevpc" {
   source  = "app.terraform.io/cimb-tf-cloud/gkevpc/google"
-  version = "1.0.5"
+  version = "1.0.1"
   
   # GKE
   google_container_cluster = {
